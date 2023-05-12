@@ -26,8 +26,8 @@ class Employee {
         this.shifts = shifts
     }
 }
-const getSchedule = (emplyee) => {
-    console.log(emplyee.name, ' works on ', emplyee.shifts)
+const getSchedule = (employee) => {
+    console.log(employee.name, ' works on ', employee.shifts)
 }
 
 
@@ -69,9 +69,9 @@ getSchedule(empOne)
 */
 
 //CODE HERE
-let empTwo = {...{empOne}}
+let empTwo = {...empOne}
 empTwo.name = 'nick'
-console.log(empTwo) // not sure how to use spread op 
+console.log(empTwo) 
 
 
 //////////////////PROBLEM 2////////////////////
@@ -101,15 +101,17 @@ console.log(empTwo) // not sure how to use spread op
 class Manager extends Employee {
     constructor(name, shifts, employees){
        super(name, shifts)
-       this.employees = employees
+       this.employees = [employees]
     }
+    getEmployees() {
+        console.log(`${this.name} manager, has ${this.employees} employees`)
+};
+    addEmployee(emp) {
+        // console.log(`${emp}`)
+        this.employees.push(emp)
+
 }
-const getEmployees = (name, employees) => {
-    console.log(`${name.Manager} manager, has ${employees.name} employees`)
-}
-const addEmployee = (emp) => {
-    console.log(`${emp.name}`)
-    something.push(emp)
+
 }
 
 /*
@@ -124,7 +126,7 @@ const addEmployee = (emp) => {
 */
 
 //CODE HERE
-let manager = new Manager('wilson', 'weekday mornings, weekday afternoons', 'Cece and Schmidt')
+let manager = new Manager('wilson', 'weekday mornings, weekday afternoons', 'Cece , Schmidt')
 
 /*
     Call the `getEmployees` method on the
@@ -132,7 +134,7 @@ let manager = new Manager('wilson', 'weekday mornings, weekday afternoons', 'Cec
 */
 
 //CODE HERE
-manager.getEmployees() // unsure why this isnt a function???
+manager.getEmployees()
 /*
     Call the `addEmployee` method on the 
     `manager` object passing in the string 
@@ -140,7 +142,7 @@ manager.getEmployees() // unsure why this isnt a function???
 */
 
 //CODE HERE 
-manager.addEmployee('coach')
+manager.addEmployee('and coach')
 
 /*
     Call the `getEmployees` method on the

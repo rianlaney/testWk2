@@ -56,10 +56,8 @@ const canWeDeliver = (zipCode) => {
     for(let i =0; i<deliveryAreaZipCodes.length; i++){
         if (zipCode === deliveryAreaZipCodes[i]){    
             return `You're in our delivery zone!`
-        } else {
-            return `Sorry, you suck`
         }
-}
+} return 'cant deliver'
 }
 console.log(canWeDeliver(85205))
 
@@ -83,7 +81,7 @@ console.log(canWeDeliver(85205))
 
 // CODE HERE
 const canWeDeliverTwo = (zipCode) => {
-    deliveryAreaZipCodes.includes(zipCode)
+    deliveryAreaZipCodes.includes(zipCode) //change to for loop and if with this param
     return `yes`
 }
 console.log(canWeDeliverTwo(85205))
@@ -123,7 +121,12 @@ const deals = [
 
 //CODE HERE
 //deals.indexOf([0]).replace('15% Off!', '10% Off!') this worked in my head
-console.log(deals.indexOf())
+deals[0].title = deals[0].title.replace('15', '10')
+
+// replace just returns it does not reassisn it!!!
+
+
+console.log(deals)
 
 
 /*
@@ -140,4 +143,5 @@ console.log(deals.indexOf())
 */
 
 //CODE HERE
-console.log(deals[text.replace(/March/gi, "April")]) // no idea tried this from w3 schools
+deals[1].desc = deals[1].desc.trim().replace('March', 'April')
+console.log(deals)

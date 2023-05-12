@@ -59,7 +59,7 @@ console.log(pizza.rating)
 */
 
 //CODE HERE
-console.log(pizza.price)
+console.log(pizza.tags[1])
 
 
 /*
@@ -70,7 +70,8 @@ console.log(pizza.price)
 */
 
 //CODE HERE
-// let {price: 14} = pizza
+let {price} = pizza
+console.log(`i am a ${pizza}`)
 
 /*
     Fourth, and last, destructure the category
@@ -148,15 +149,10 @@ let foodArr = [
 */
 
 //CODE HERE
+const callback = (element) => element.tags.includes('cheesy')
 
-const filteredFood = foodArr.filter(element = (element, index, callback) => {
-    callback(`${element} ${index}`)
-})
-let callback = (tag) => {
-  // want to return the object with entree
-  return tag.pizza
-}
-filteredFood(entree)
+const filteredFood = foodArr.filter(callback)
+console.log(filteredFood)
 
 //////////////////PROBLEM 5////////////////////
 /* 
@@ -198,7 +194,11 @@ filteredFood(entree)
 */
 
 //CODE HERE
+const filterByProperty = (property, number, type) => {
+   if(type ===)
+   
 
+}
 
 /*
     Invoke the `filterByProperty` function passing
